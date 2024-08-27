@@ -131,3 +131,30 @@
     </section>
     <!-- end slider section -->
 </div>
+
+<!-- floating button -->
+<div class="floating-container">
+    <div class="floating-button">+</div>
+    <div class="element-container">
+        <span class="float-element">
+            <a href="https://www.tiktok.com/@cateringbox_3putri" style="color: white;">
+                <span>TikTok</span>
+            </a>
+        </span>
+        <span class="float-element">
+            <a href="mailto:cateringbox3putri@gmail.com" style="color: white;">
+                <i class="fa fa-envelope" style="height: 25px;"></i>
+            </a>
+        </span>
+        <span class="float-element">
+            <a href="/" style="color: white;">
+                <i class="fa fa-whatsapp" style="height: 25px;"></i>
+            </a>
+        </span>
+        <span class="float-element">
+            <a href="https://www.instagram.com/cateringbox_3putri/" style="color: white;">
+                <i class="fa fa-instagram" style="height: 25px;"></i>
+            </a>
+        </span>
+    </div>
+</div>

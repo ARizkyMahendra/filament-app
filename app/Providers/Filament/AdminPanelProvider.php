@@ -17,6 +17,7 @@ use Illuminate\Routing\Middleware\SubstituteBindings;
 use Illuminate\Session\Middleware\AuthenticateSession;
 use Illuminate\Session\Middleware\StartSession;
 use Illuminate\View\Middleware\ShareErrorsFromSession;
+use Leandrocfe\FilamentApexCharts\FilamentApexChartsPlugin;
 
 class AdminPanelProvider extends PanelProvider
 {
@@ -29,6 +30,9 @@ class AdminPanelProvider extends PanelProvider
             ->login()
             ->brandLogo(asset('images/icon-nav2.png'))
             ->brandLogoHeight('2.7rem')
+            ->plugins([
+                FilamentApexChartsPlugin::make()
+            ])
             ->colors([
                 'primary' => Color::Amber,
             ])

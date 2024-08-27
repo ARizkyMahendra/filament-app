@@ -20,22 +20,18 @@ class wIncomeChart extends ChartWidget
     protected function getData(): array
     {
 
-        $startDate = ! is_null($this->filters['startDate'] ?? null) ?
-            Carbon::parse($this->filters['startDate']) :
-            null;
+        $startDate = $this->filters['startDate'];
 
-        $endDate = ! is_null($this->filters['endDate'] ?? null) ?
-            Carbon::parse($this->filters['endDate']) :
-            now();
+        $endDate = $this->filters['endDate'];
             
         $data = Trend::model(transaksi::class)
             ->between(
-                start: $startDate,
-                end: $endDate,
+                start: $startDate ? Carbon::parse($startDate) : now()->subMonths(2),
+                end: $endDate ? Carbon::parse($endDate) : now(),
             )
             ->perDay()
             ->sum('harga');
-        // dd($data);
+         //dd($data);
         return [
             'datasets' => [
                 [

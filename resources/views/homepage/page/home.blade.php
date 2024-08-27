@@ -5,47 +5,36 @@
 <section class="offer_section layout_padding-bottom">
     <div class="offer_container">
       <div class="container ">
+        <div class="heading_container heading_center mt-4">
+          <h2>
+            Our Package
+          </h2>
+        </div>
         <div class="row">
+          @foreach ($data as $item)
           <div class="col-md-6  ">
             <div class="box ">
               <div class="img-box">
-                <img src="{{asset('assets/images/o1.jpg')}}" alt="">
+                <img src="{{asset('storage/' . $item->image)}}" alt="">
               </div>
               <div class="detail-box">
                 <h5>
-                  Tasty Thursdays
+                  <h2>{{ $item -> nama_paket }}</h2>
                 </h5>
                 <h6>
-                  <span>20%</span> Off
+                  Rp. {{ $item -> harga }}
                 </h6>
-                <a href="">
+                <a href="/">
                   Order Now
                 </a>
               </div>
             </div>
           </div>
-          <div class="col-md-6  ">
-            <div class="box ">
-              <div class="img-box">
-                <img src="{{asset('assets/images/o2.jpg')}}" alt="">
-              </div>
-              <div class="detail-box">
-                <h5>
-                  Pizza Days
-                </h5>
-                <h6>
-                  <span>15%</span> Off
-                </h6>
-                <a href="">
-                  Order Now
-                </a>
-              </div>
-            </div>
-          </div>
+          @endforeach
         </div>
       </div>
     </div>
-  </section>
+</section>
 
   <!-- end offer section -->
 
@@ -81,8 +70,41 @@
       </div>
     </div>
   </section>
-
+<hr>
   <!-- end about section -->
+
+  <!-- Menu Periode section -->
+
+  <section class="about_section layout_padding">
+    <div class="container  ">
+      <div class="row">
+        <div class="col-md-6">
+          @foreach ($menuPeriode as $item)
+          <div class="detail-box">
+            <div class="heading_container">
+              <h2>
+                {{$item -> title}}
+              </h2>
+            </div>
+            <p>
+              {{$item -> desc}}
+            </p>
+            <a href="#contact">
+              Read More
+            </a>
+          </div>
+          @endforeach
+        </div>
+        <div class="col-md-6 ">
+          <div class="img-box">
+            <img src="{{asset('storage/' . $item->image)}}" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- end Menu Periode section -->
 
   <!-- food section -->
 
@@ -355,38 +377,14 @@
           <div class="item">
             <div class="box">
               <div class="detail-box">
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                  dolore magna aliqua. Ut enim ad minim veniam
-                </p>
-                <h6>
-                  Moana Michell
-                </h6>
-                <p>
-                  magna aliqua
-                </p>
-              </div>
-              <div class="img-box">
-                <img src="images/client1.jpg" alt="" class="box-img">
+                <img src="{{asset('assets/images/client1.jpg')}}" alt="" >
               </div>
             </div>
           </div>
           <div class="item">
             <div class="box">
               <div class="detail-box">
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                  dolore magna aliqua. Ut enim ad minim veniam
-                </p>
-                <h6>
-                  Mike Hamell
-                </h6>
-                <p>
-                  magna aliqua
-                </p>
-              </div>
-              <div class="img-box">
-                <img src="images/client2.jpg" alt="" class="box-img">
+                <img src="{{asset('assets/images/client2.jpg')}}" alt="" class="box-img">
               </div>
             </div>
           </div>
@@ -396,5 +394,34 @@
   </section>
 
   <!-- end client section -->
+
+  <!-- contact section -->
+
+  <section class="page-section bg-light" id="contact" style="color: black;">
+      <div class="container">
+          <h1 style="font-size: 40px; text-align: center;">Order Sekarang</h1>
+          <hr>
+          <h6 class="mb-5 text-center">Hubungi admin dibawah sesuai dengan lokasi anda.</h6>
+          <div class="row">
+              @foreach ($contact as $item)
+              <div class="col-lg-4 center">
+                  <div class="team-member">
+                      <a href="">
+                          <img class="mx-auto rounded-circle" src="{{asset('storage/' . $item->image)}}"
+                              alt="..." />
+                      </a>
+                      <h4>{{ $item -> nama_lokasi }}</h4>
+                      <p class="text-muted">{{ $item -> maps }}</p>
+                      <a class="btn btn-dark btn-social mx-3"
+                          href="https://wa.me/{{ $item -> phone }}?text=Halo%20min%2C%20saya%20mau%20tanya%20tanya%20paket%20catering%20box%203%20putri"><i
+                              class="fa fa-whatsapp" style="height: 20px;"></i></a>
+                  </div>
+              </div>
+              @endforeach
+          </div>
+      </div>
+  </section>
+
+  <!-- end contact section -->
 
 @endsection
