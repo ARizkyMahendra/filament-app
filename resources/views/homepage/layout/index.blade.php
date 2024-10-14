@@ -1,75 +1,63 @@
 <!DOCTYPE html>
-<html>
+  <html>
+    <head>
+      <meta charset="utf-8">
+      <title>{{$title}}</title>
+      <meta content="width=device-width, initial-scale=1.0" name="viewport">
+      <meta content="" name="keywords">
+      <meta content="" name="description">
 
-<head>
-  <!-- Basic -->
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <!-- Mobile Metas -->
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-  <!-- Site Metas -->
-  <meta name="keywords" content="" />
-  <meta name="description" content="" />
-  <meta name="author" content="" />
-  <link rel="shortcut icon" href="{{asset('assets/images/favicon.png')}}" type="">
+      <!-- Favicon -->
+      <link href="img/favicon.ico" rel="icon">
 
-  <title> {{$title}} </title>
+      <!-- Google Web Fonts -->
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&family=Pacifico&display=swap" rel="stylesheet">
 
-  <!-- bootstrap core css -->
-  <link rel="stylesheet" type="text/css" href="{{asset('css/template/css/bootstrap.css')}}" />
- 
-  <!-- fontAwesome icon -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
- 
-  <!--owl slider stylesheet -->
-  <link rel="stylesheet" type="text/css"
-    href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
-  <!-- nice select  -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/css/nice-select.min.css"
-    integrity="sha512-CruCP+TD3yXzlvvijET8wV5WxxEh5H8P4cmz0RFbKK6FlZ2sYl3AEsKlLPHbniXKSrDdFewhbmBK5skbdsASbQ=="
-    crossorigin="anonymous" />
-  
-  <!-- Custom styles for this template -->
-  <link href="{{asset('css/template/css/style.css')}}" rel="stylesheet" />
-  <!-- responsive style -->
-  <link href="{{asset('css/template/css/responsive.css')}}" rel="stylesheet" />
+      <!-- Icon Font Stylesheet -->
+      <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
 
-  <meta name="csrf-token" content="{{ csrf_token() }}">
+      <!-- Libraries Stylesheet -->
+      <link href="{{asset('css/lib/animate/animate.min.css')}}" rel="stylesheet">
+      <link href="{{asset('css/lib/owlcarousel/assets/owl.carousel.min.css')}}" rel="stylesheet">
+      <link href="{{asset('css/lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css')}}" rel="stylesheet" />
 
-</head>
+      <!-- Customized Bootstrap Stylesheet -->
+      <link href="{{asset('css/template/bootstrap.min.css')}}" rel="stylesheet">
 
-<body>
+      <!-- Template Stylesheet -->
+      <link href="{{asset('css/template/style.css')}}" rel="stylesheet">
 
-  @include('homepage.component.navbar')
+      <meta name="csrf-token" content="{{ csrf_token() }}">
+    </head>
 
-  
-  @yield('content')
-  
+    <body>
+      <div class="container-xxl bg-white p-0">
+        @include('homepage.component.spinner')    
+        @include('homepage.component.navbar')    
 
-  @include('homepage.component.footer')
+        @yield('content')
+        
+        @include('homepage.component.footer')
+      </div>
 
-  <!-- jQery -->
-  <script src="{{asset('js/template/js/jquery-3.4.1.min.js')}}"></script>
-  <!-- popper js -->
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
-  </script>
-  <!-- bootstrap js -->
-  <script src="{{asset('js/template/js/bootstrap.js')}}"></script>
-  <!-- owl slider -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js">
-  </script>
-  <!-- isotope js -->
-  <script src="https://unpkg.com/isotope-layout@3.0.4/dist/isotope.pkgd.min.js"></script>
-  <!-- nice select -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/js/jquery.nice-select.min.js"></script>
-  <!-- custom js -->
-  <script src="{{asset('js/template/js/custom.js')}}"></script>
-  <!-- Google Map -->
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&callback=myMap">
-  </script>
-  <!-- End Google Map -->
+    
+      <!-- JavaScript Libraries -->
+      <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+      <script src="{{asset('css/lib/wow/wow.min.js')}}"></script>
+      <script src="{{asset('css/lib/easing/easing.min.js')}}"></script>
+      <script src="{{asset('css/lib/waypoints/waypoints.min.js')}}"></script>
+      <script src="{{asset('css/lib/counterup/counterup.min.js')}}"></script>
+      <script src="{{asset('css/lib/owlcarousel/owl.carousel.min.js')}}"></script>
+      <script src="{{asset('css/lib/tempusdominus/js/moment.min.js')}}"></script>
+      <script src="{{asset('css/lib/tempusdominus/js/moment-timezone.min.js')}}"></script>
+      <script src="{{asset('css/lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js')}}"></script>
+      <script src="https://cdn.logwork.com/widget/countdown.js"></script>
 
-</body>
-
-</html>
+      <!-- Template Javascript -->
+      <script src="{{asset('js/template/main.js')}}"></script>
+    </body>
+  </html>

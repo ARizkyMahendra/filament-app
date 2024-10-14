@@ -19,9 +19,11 @@ class PaketResource extends Resource
 
     protected static ?string $navigationIcon = 'heroicon-o-list-bullet';
 
-    protected static ?string $navigationLabel = 'Menu Package';
+    protected static ?string $navigationLabel = 'Paket menu';
 
     protected static ?string $modelLabel = 'Menu Package';
+
+    protected static ?string $navigationGroup = 'Set Menu';
 
 
     public static function form(Form $form): Form

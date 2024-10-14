@@ -19,7 +19,7 @@ class MenuPeriodeResource extends Resource
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
 
-    protected static ?string $navigationLabel = 'Menu Periode';
+    protected static ?string $navigationLabel = 'Periode menu';
 
     protected static ?string $modelLabel = 'Menu Periode';
 
