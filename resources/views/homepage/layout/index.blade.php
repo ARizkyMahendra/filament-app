@@ -7,8 +7,7 @@
       <meta content="" name="keywords">
       <meta content="" name="description">
 
-      <!-- Favicon -->
-      <link href="img/favicon.ico" rel="icon">
+      <link rel="shortcut icon" href="{{asset('assets/images/icon-vacation.png')}}">
 
       <!-- Google Web Fonts -->
       <link rel="preconnect" href="https://fonts.googleapis.com">

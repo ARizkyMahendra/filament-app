@@ -14,13 +14,7 @@
                 <a href="about.html" class="nav-item nav-link">About</a>
                 <a href="about.html" class="nav-item nav-link">Package</a>
                 <a href="menu.html" class="nav-item nav-link">Menu Gallery</a>
-                <div class="nav-item dropdown">
-                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
-                    <div class="dropdown-menu m-0">
-                        <a href="booking.html" class="dropdown-item">Career</a>
-                        <a href="testimonial.html" class="dropdown-item">Testimonial</a>
-                    </div>
-                </div>
+                <a href="menu.html" class="nav-item nav-link">career</a>
                 <a href="contact.html" class="nav-item nav-link">Contact</a>
             </div>
         </div>
