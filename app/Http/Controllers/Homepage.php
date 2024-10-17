@@ -26,11 +26,15 @@ class Homepage extends Controller
         ]);
     }
 
-    public function contact(){
-        $contact = Contact::all();
-        return view('homepage.page.contact',[
-            'title' => 'Contact Us',
-            'contact' => $contact,
+    public function order(){
+        return view('homepage.page.order',[
+            'title' => 'Come to Order',
+        ]);
+    }
+
+    public function about(){
+        return view('homepage.page.about',[
+            'title' => 'About Us',
         ]);
     }
 }

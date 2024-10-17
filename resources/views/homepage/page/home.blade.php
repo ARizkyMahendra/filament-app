@@ -1,6 +1,23 @@
 @extends('homepage.layout.index')
 @section('content')
   
+    <!-- Hero Start -->
+        <div class="container-xxl py-5 bg-dark hero-header mb-5">
+            <div class="container my-5 py-5">
+                <div class="row align-items-center g-5">
+                    <div class="col-lg-5 text-center text-lg-start">
+                        <h1 class="display-3 text-white animated slideInLeft">Enjoy Our<br>Delicious Meal</h1>
+                        <p class="text-white animated slideInLeft mb-4 pb-2">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat amet</p>
+                        <a href="/order" class="btn btn-primary py-sm-3 px-sm-5 me-3 animated slideInLeft">Book A Table</a>
+                    </div>
+                    <div class="col-lg-6 text-center text-lg-end overflow-hidden">
+                        <img class="img-fluid" src="{{asset('assets/images/image (1).png')}}" alt="" style="width: 500px">
+                    </div>
+                </div>
+            </div>
+        </div>
+    <!-- Hero End -->
+
     <!-- Service Start -->
         <div class="container-xxl py-5 ">
             <div class="container">
@@ -212,33 +229,6 @@
         </div>
     <!-- Gallery Menu End -->
    
-    <!-- contact section -->
-        {{-- <section class="page-section bg-light" id="contact" style="color: black;">
-            <div class="container">
-                <h1 style="font-size: 40px; text-align: center;">Order Sekarang</h1>
-                <hr>
-                <h6 class="mb-5 text-center">Hubungi admin dibawah sesuai dengan lokasi anda.</h6>
-                <div class="row">
-                    @foreach ($contact as $item)
-                    <div class="col-lg-4 center">
-                        <div class="team-member">
-                            <a href="">
-                                <img class="mx-auto rounded-circle" src="{{asset('storage/' . $item->image)}}"
-                                    alt="..." />
-                            </a>
-                            <h4>{{ $item -> nama_lokasi }}</h4>
-                            <p class="text-muted">{{ $item -> maps }}</p>
-                            <a class="btn btn-dark btn-social mx-3"
-                                href="https://wa.me/{{ $item -> phone }}?text=Halo%20min%2C%20saya%20mau%20tanya%20tanya%20paket%20catering%20box%203%20putri"><i
-                                    class="fa fa-whatsapp" style="height: 20px;"></i></a>
-                        </div>
-                    </div>
-                    @endforeach
-                </div>
-            </div>
-        </section> --}}
-    <!-- end contact section -->
-
     <!-- FAQs Start -->
         <div class="container-xxl py-5">
             <div class="container">
@@ -406,5 +396,58 @@
             </div>
         </div>
     <!-- Contact End -->
+
+    <!-- Testimonial Start -->
+        <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
+            <div class="container">
+                <div class="text-center">
+                    <h5 class="section-title ff-secondary text-center text-primary fw-normal">Testimonial</h5>
+                    <h1 class="mb-5">Our Clients Say!!!</h1>
+                </div>
+                <div class="owl-carousel testimonial-carousel">
+                    <div class="testimonial-item bg-transparent border rounded p-4">
+                        <img class="img-fluid flex-shrink-0 rounded-circle" src="{{asset('assets/images/image (6).png')}}">
+                        <div class="d-flex align-items-center">
+                            
+                            <div class="ps-3">
+                                <h5 class="mb-1">Client Name</h5>
+                                <small>Profession</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-item bg-transparent border rounded p-4">
+                        <img class="img-fluid flex-shrink-0 rounded-circle" src="{{asset('assets/images/image (6).png')}}">
+                        <div class="d-flex align-items-center">
+                            
+                            <div class="ps-3">
+                                <h5 class="mb-1">Client Name</h5>
+                                <small>Profession</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-item bg-transparent border rounded p-4">
+                        <img class="img-fluid flex-shrink-0 rounded-circle" src="{{asset('assets/images/image (6).png')}}">
+                        <div class="d-flex align-items-center">
+                            
+                            <div class="ps-3">
+                                <h5 class="mb-1">Client Name</h5>
+                                <small>Profession</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-item bg-transparent border rounded p-4">
+                        <img class="img-fluid flex-shrink-0 rounded-circle" src="{{asset('assets/images/image (6).png')}}">
+                        <div class="d-flex align-items-center">
+                            
+                            <div class="ps-3">
+                                <h5 class="mb-1">Client Name</h5>
+                                <small>Profession</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <!-- Testimonial End -->
 
 @endsection
